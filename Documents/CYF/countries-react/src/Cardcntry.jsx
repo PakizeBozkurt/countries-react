@@ -35,7 +35,7 @@ function Cardcntry() {
      <div className="container">
         <div className="row">
       {filtered.map((e) => {
-        return <CountryInfo name={e} />
+        return <CountryInfo data={e} />
         ;
       })}
       </div>
