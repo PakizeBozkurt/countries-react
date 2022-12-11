@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CountryInfo from "./CountryInfo";
+import Select from "./Select";
 
 function Cardcntry() {
   const [country, setCountry] = useState([]);
@@ -29,11 +30,13 @@ function Cardcntry() {
     <div>
       <h2>countries</h2>
       <input placeholder="search" onChange={handleChange} type="text"/>
+      <Select/>
      
      <div className="container">
         <div className="row">
       {filtered.map((e) => {
-        return <CountryInfo name={e} />;
+        return <CountryInfo name={e} />
+        ;
       })}
       </div>
     </div>
